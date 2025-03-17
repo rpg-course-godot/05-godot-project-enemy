@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://qlpgp2trikx2"]
+
+[ext_resource type="Texture2D" uid="uid://vdl1kq4tg2h6" path="res://sprites/animated/wooden_door_2.png" id="1_07of5"]
+[ext_resource type="Script" path="res://utils/door_class.gd" id="2_jp8fo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbdor"]
+atlas = ExtResource("1_07of5")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wcyu"]
+atlas = ExtResource("1_07of5")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hncgl"]
+atlas = ExtResource("1_07of5")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpc10"]
+atlas = ExtResource("1_07of5")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgu4p"]
+atlas = ExtResource("1_07of5")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t45st"]
+atlas = ExtResource("1_07of5")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e0lf3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbdor")
+}],
+"loop": false,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wcyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hncgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpc10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgu4p")
+}],
+"loop": false,
+"name": &"open",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t45st")
+}],
+"loop": false,
+"name": &"opened",
+"speed": 5.0
+}]
+
+[node name="WoodenDoor" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_e0lf3")
+animation = &"opened"
+autoplay = "closed"
+offset = Vector2(0, -32)
+script = ExtResource("2_jp8fo")

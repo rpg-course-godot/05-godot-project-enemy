@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://ts3dfnhvk5ix"]
+
+[node name="EnvironmentalDarkness" type="CanvasModulate"]
+color = Color(0.0352941, 0.0352941, 0.0352941, 1)

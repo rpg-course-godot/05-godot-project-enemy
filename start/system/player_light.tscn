@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4wbgsydcaop2"]
+
+[ext_resource type="Texture2D" uid="uid://m2od8e7ori7" path="res://sprites/effects/light.png" id="1_5nala"]
+
+[node name="PlayerLight" type="PointLight2D"]
+energy = 0.3
+texture = ExtResource("1_5nala")
+offset = Vector2(10, 0)
+texture_scale = 4.0
